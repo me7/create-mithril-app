@@ -1,4 +1,4 @@
-let m = require('mithril')
+var m = require('mithril')
 
 User = {
     list:[],

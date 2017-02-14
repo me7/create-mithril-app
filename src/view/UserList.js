@@ -1,11 +1,11 @@
-let m = require('mithril')
-let User = require('../model/User')
+var m = require('mithril')
+var User = require('../model/User')
 
-let UserList = {
+var UserList = {
     oninit: User.loadList,
     view: function() {
         return m(".user-list",User.list.map(function(u){
-            return m("a.user-list-item",{href:"/edit/" +u.id, oncreate:m.route.link}, `${u.firstName} ${u.lastName}`)}))
+            return m("a.user-list-item",{href:"/edit/" +u.id, oncreate:m.route.link}, "u.firstName"+" "+u.lastName)}))
     }
 }
 
